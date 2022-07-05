@@ -329,3 +329,6 @@ li{
     width:95%;
     border-radius: 6px;
 }
+@media screen and (min-width:700px) {
+    
+}
