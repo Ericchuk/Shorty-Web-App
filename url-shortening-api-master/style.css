@@ -50,6 +50,16 @@ header nav{
     z-index:2;
     /* border:2px solid green; */
 }
+header nav li{
+    padding:0;
+    margin:0;
+    /* border:2px solid black; */
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
 header nav a{
     text-decoration: none;
     font-size: 22px;
@@ -180,7 +190,7 @@ button{
 }
 .mainbody div.span{
     width:10px;
-    height:180vh;
+    height:50%;
     position: absolute;
     top:500px;
     left: 49%;
@@ -203,7 +213,7 @@ button{
     background-color: var(--Dark-Violet);
     padding:22px 12px;
     margin:0 35%;
-    border-radius: 100px; */
+    border-radius: 100px; 
     /* border:2px solid black;
     /* left:0; */
 }
@@ -330,5 +340,317 @@ li{
     border-radius: 6px;
 }
 @media screen and (min-width:700px) {
+    header nav{
+        position:relative;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        /* border:2px solid black; */
+        padding:0px 10px;
+        margin:0 0 0 70px;
+    }
+    header nav li{
+        padding:0;
+        margin:0 50px 0 0;
+        /* border:2px solid black; */
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+    header nav a{
+        color:var(--Very-Dark-Blue);
+        font-size: 15px;
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border:none;
+        padding:0px 10px;
+        margin:-10px 0;
+    }
+    header nav ul button{
+        padding:10px 15px;
+        /* border:2px solid black; */
+        color:var(--Gray);
+        margin:0;
+        font-size: 15px;
+    }
+    header nav ul button:last-child{
+        margin:0 10px;
+        color:white;
+        /* border: 2px solid rebeccapurple; */
+    }
+    .hamburger,
+    .close{
+        display: none;
+    }
+    .headerBanner img{
+        width:80%;
+        padding:20px;
+    }
+    .headerBanner div{
+        padding:0 145px;
+    }
+    .formResultSection{
+        margin:20px 140px;
+    }
+    .grow{
+        margin:30px 120px;
+    }
+    .mainbody div.span{
+        top: 30%;
+        height: 50%;
+        left:28.4%;
+        /* border:2px solid black; */
+    }
+    .mainbody{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainbody div{
+        margin:20px 140px;
+    }
+    .mainbody div:not(:first-child){
+        margin:70px 140px;
+    }
+    .mainbody div aside{
+        width:20%;
+    }
+    .mainbody div:last-child aside{
+        width:22%;
+        /* background-color: transparent; */
+    }
+    .footerHead{
+        background-image: url(images/bg-boost-desktop.svg);
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        padding:20px;
+    }
+    footer section{
+        text-align: left;
+        align-items: flex-start;
+        margin:0 10px;
+        padding:0;
+        /* border:2px solid white; */
+    }
+    footer section h3{
+        padding: 0;
+        margin:17px 0;
+    }
+    footer div{
+        width:100%;
+        text-align: center;
+    }
     
+}
+@media screen and (min-width:1000px) {
+     header nav{
+        width:100%;
+        /* border:2px solid black; */
+        justify-content: space-between;
+    }
+    header nav li{
+        width:30%;
+    }
+    header nav a{
+        margin:0;
+        padding:0;
+    }
+    header nav a{
+        margin:10px 0px 10px 0;
+        /* border:2px solid red; */
+        /* width:10%; */
+    }
+    header nav ul{
+        /* border:2px solid black; */
+        align-items: flex-end;
+        text-align: right;
+        width:35%;
+    } 
+    header nav ul button{
+        /* margin:0 20px; */
+        /* border:2px solid black; */
+        padding:10px 25px;
+    }
+    .mainbody div:first-child{
+        margin:20px 300px;
+        width:100%;
+    }
+    .mainbody{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding:100px 0;
+    }
+    .mainbody div:not(:first-child,:nth-child(2)){
+        width:28%;
+        /* border:2px solid black; */
+        margin:80px 20px 20px;
+        padding:5px 20px;
+        text-align: left;
+    }
+    .mainbody div:nth-child(4){
+        position: relative;
+        top:25px;
+    }
+    .mainbody div:nth-child(5){
+        position: relative;
+        top:60px;
+    }
+    .mainbody div aside{
+        width:37%;
+        text-align: center;
+        margin:0 0px;
+    }
+    .mainbody div:not(:first-child) p{
+        font-size: 14px;
+    }
+    .mainbody div:last-child aside{
+        width:39%;
+    }
+    .mainbody div.span{
+        height:10px;
+        width:60%;
+        left:50px;
+        top:55%;
+    }
+
+   
+}
+@media screen and (min-width:1300px) {
+    header{
+        padding:20px 100px;
+    }
+    header nav li{
+        width:40%;
+    }
+    header nav a{
+        font-size: 20px;
+        /* border:2px solid black; */
+    }
+    header nav ul button{
+        font-size: 20px;
+    }
+    .headerBanner{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding:0;
+        margin:0;
+        /* border:2px solid black; */
+    }
+    .headerBanner div{
+        margin:0;
+        padding:20px 100px;
+    }
+    .headerBanner h2{
+        padding:10px 10px 10px 0;
+        font-size: 60px;
+        line-height: 4rem;
+    }
+    .headerBanner p{
+        padding:0;
+        margin:10px 0;
+        font-size: 19px;
+    }
+    .headerBanner img{
+        width:50%;
+    }
+    .formResultSection{
+        margin:0 170px 0 100px;
+        padding:60px 50px;
+        background-image: url(images/bg-shorten-desktop.svg);
+        background-size: 100%;
+        background-position: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .formResultSection input{
+        width:320%;
+        /* border:2px solid wheat; */
+    }
+    .formResultSection button{
+        width:20%;
+        margin:0;
+    }
+    .formResultSection .error{
+        margin:0 0 0 40px;
+        position: absolute;
+        top:110px;
+        left:0;
+    }
+    .mainbody div:first-child{
+        margin:30px 400px;
+        line-height: 3rem;
+    }
+    .mainbody div:first-child p{
+        font-size: 20px;
+    }
+    .mainbody{
+        padding:120px 30px;
+    }
+    .mainbody div aside{
+        width:30%;
+    }
+    .mainbody div:last-child aside{
+        width:32%;
+    }
+    .footerHead{
+        background-size: 100%;
+        background-position: bottom;
+        padding:50px;
+    }
+    footer{
+        padding:30px 100px;
+    }
+    footer .footLogo{
+        width: 25%;
+        /* border:2px solid wheat; */
+    }
+    footer section{
+        width:15%;
+        /* border:2px solid black; */
+    }
+    footer div:nth-child(5){
+        width:20%;
+        /* border:2px solid black; */
+    }
+    footer div:last-child{
+        width:100%;
+    }
+    .grow{
+        margin:30px 170px 30px 100px;
+    }
+    .hr{
+        display: none;
+    }
+    .result{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+        margin:10px 0;
+        width:100%;
+    }
+    .result ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
