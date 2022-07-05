@@ -36,6 +36,7 @@ function checkInput(){
     
     if(input.value != "" && input.value.match(regex)){
         // console.log(address);
+        document.querySelector(".error").style.display = "none";
         async function getApi(){
             try{
                let apiData = await fetch(apiAddress);
@@ -63,6 +64,7 @@ function checkInput(){
                 ul.appendChild(li);
                 ul.appendChild(button)
                 grow.appendChild(div);
+                input.value = "";
                 return
                }
 
@@ -78,6 +80,7 @@ function checkInput(){
         getApi();
     }else{
         console.log("lll");
+        document.querySelector(".error").style.display = "block";
     }
 }
 
