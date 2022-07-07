@@ -63,7 +63,7 @@ function checkInput(){
                 div.appendChild(ul);
                 ul.appendChild(li);
                 ul.appendChild(button)
-                grow.appendChild(div);
+                grow.prepend(div);
                 input.value = "";
                 return
                }
