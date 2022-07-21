@@ -65,11 +65,13 @@ function checkInput(){
                 function copyfunc(){
                     navigator.clipboard.writeText(shortLink);
                     copy1.textContent = "Copied"
+                    copy1.style.backgroundColor = "var(--Dark-Violet)";
                     console.log(shortLink);
-                    setTimeout(reverse, 1000)
+                    setTimeout(reverse, 2000)
                 }
                 function reverse(){
-                    copy1.textContent = "Copy"
+                    copy1.textContent = "Copy";
+                    copy1.style.backgroundColor = "var(--Cyan)";
                 }
                 
                 copy1.addEventListener("click", copyfunc);
@@ -86,6 +88,5 @@ function checkInput(){
         document.querySelector(".error").style.display = "block";
     }
 }
-console.log("ggg")
 shortIt.addEventListener("click", checkInput)
 checkInput();
