@@ -35,24 +35,19 @@ function checkInput(){
     let address = `${apiAddress}?${input.value}`;
     
     if(input.value != "" && input.value.match(regex)){
-        // console.log(address);
         document.querySelector(".error").style.display = "none";
         async function getApi(){
             try{
                let apiData = await fetch(apiAddress);
-               let response = await apiData.json();links.push([response.result.full_short_link, response.result.original_link]);
-               for(let i = 0; i < links.length; i++){
-                // console.log(response);
+               let response = await apiData.json();
                 let div = document.createElement("div");
                 div.className = "result"
                 let p = document.createElement("p");
                 p.className = "fromJs";
                 p.textContent = `${response.result.original_link}`
                 let ul = document.createElement("ul");
-                // ul.appendChild(li)
                 let hr  = document.createElement("hr");
                 hr.className = "hr"
-                // ul.appendChild(button)
                 let li = document.createElement("li");
                 li.textContent = `${response.result.full_short_link}`
                 let button = document.createElement("button");
@@ -65,45 +60,32 @@ function checkInput(){
                 ul.appendChild(button)
                 grow.prepend(div);
                 input.value = "";
-                return
+                const copy1 = grow.querySelector(".btn");
+                let shortLink = grow.querySelector("li").textContent;
+                function copyfunc(){
+                    navigator.clipboard.writeText(shortLink);
+                    copy1.textContent = "Copied"
+                    console.log(shortLink);
+                    setTimeout(reverse, 1000)
+                }
+                function reverse(){
+                    copy1.textContent = "Copy"
+                }
+                
+                copy1.addEventListener("click", copyfunc);
                }
-
-               
-            }
             catch{
                 console.error();
             }
             
             
         }
-        // console.log(advance,res.result.original_link)
         getApi();
     }else{
         console.log("lll");
         document.querySelector(".error").style.display = "block";
     }
 }
-
+console.log("ggg")
 shortIt.addEventListener("click", checkInput)
 checkInput();
-
-
-// // XMLHttpRequest
-// let xmlhttp = new XMLHttpRequest();
-
-// xmlhttp.onload = function(){
-//     // if(this.readyState == 4 && this.status == 200){
-//         console.log(xmlhttp.responseText);
-//        let  response = JSON.parse(xmlhttp.responseText);
-//     //    let title = response.title;
-//     //    let divValue1 = document.querySelector(".json-overlay");
-//       console.log("ddd")
-//         for(let i = 0; i < response.length; i++){}
-// }
-// // }
-
-// let url = input.value;  
-// let apiAddress = "https://api.shrtco.de/v2/shorten";
-//     apiAddress = `https://api.shrtco.de/v2/shorten?url=${url}`
-// xmlhttp.open("GET", apiAddress);
-// xmlhttp.send();
